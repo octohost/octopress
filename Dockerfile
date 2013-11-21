@@ -5,8 +5,9 @@ RUN apt-get install -y make --force-yes
 RUN mkdir /srv/www
 RUN curl https://raw.github.com/octohost/octopress/master/Gemfile > /srv/www/Gemfile
 RUN cd /srv/www; bundle install; rm Gemfile
+RUN gem install rake
 ADD . /srv/www
 
 EXPOSE 4000
 
-CMD bundle exec rake preview
+CMD cd /srv/www; bundle exec rake preview
