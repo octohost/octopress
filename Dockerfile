@@ -9,4 +9,4 @@ ADD . /srv/www
 
 EXPOSE 4000
 
-CMD ["/usr/local/bin/foreman","start","-d","/srv/www"]
+CMD bundle exec rake preview
