@@ -2,7 +2,7 @@ FROM octohost/ruby-1.9
 
 RUN mkdir /srv/www
 ADD . /srv/www
-RUN cd /srv/www; bundle install --deployment --without test development
+RUN cd /srv/www; bundle install --deployment
 
 EXPOSE 4000
 
