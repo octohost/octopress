@@ -1,9 +1,10 @@
-FROM octohost/ruby-1.9
+FROM octohost/octopress-nginx
 
-RUN mkdir /srv/www
-ADD . /srv/www
-RUN cd /srv/www; bundle install --deployment
+WORKDIR /srv/www
 
-EXPOSE 4000
+ADD . /srv/www/
+RUN rake generate
 
-CMD cd /srv/www; bundle exec rake preview
+EXPOSE 80
+
+CMD nginx
