@@ -23,8 +23,6 @@ git remote add octohost git@ip.address.here:octopress.git
 git push octohost master
 ```
 
-Example site \(usually\) at [http://octopress.octohost.io](http://octopress.octohost.io)
-
 ## Documentation
 
 Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
